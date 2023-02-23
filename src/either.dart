@@ -46,4 +46,10 @@ class Either<L, R> {
   String toString() {
     return "Either{left: $left, right: $right}";
   }
+
+  // Function to set the left
+  Either<L, R> setLeft(L left) {
+    return Either(left, right);
+  }
+  // Function to set the right
 }

@@ -1,13 +1,16 @@
-import 'either.dart';
+import 'core.dart';
 
 void main(List<String> args) {
-  Either<String, int> either = Either("Hello", 10);
+  Left<String> left = Left("Hello");
+  Right<int> right = Right(10);
+
+  Either<String, int> either = Either(left.value, right.value);
   //lets print the either
   print(either);
-  //lets print the left
-  print(either.getLeft());
-  //lets print the right
-  print(either.getRight());
+  //lets print the left of either)
+  print(either.left);
+  //lets print the right of either
+  print(either.right);
   //check if its left
   print(either.isLeft);
   //check if its right
